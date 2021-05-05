@@ -1,0 +1,28 @@
+.card-image {
+  display: block;
+  min-height: 20rem;
+  /* layout hack */
+  background: #fff center center no-repeat;
+  background-size: cover;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
+  /* blur the lowres image */
+}
+
+.card-image > img {
+  display: block;
+  width: 50%;
+  opacity: 0;
+  /* visually hide the img element */
+}
+
+.card-image.is-loaded {
+  -webkit-filter: none;
+          filter: none;
+  /* remove the blur on fullres image */
+  -webkit-transition: -webkit-filter 1s;
+  transition: -webkit-filter 1s;
+  transition: filter 1s;
+  transition: filter 1s, -webkit-filter 1s;
+}
+/*# sourceMappingURL=blury.css.map */
