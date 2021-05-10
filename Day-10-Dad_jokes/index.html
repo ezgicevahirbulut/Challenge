@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dad Jokes</title>
+    <link rel="stylesheet" href="dad_jokes.css">
+</head>
+<body>
+    
+
+    <div id="joke-container">
+        <h1>Dad Jokes</h1>
+      
+        <form id="joke-form" class="form-inline">
+          <div class="form-group">
+            <input type="text"
+                   id="joke-number"
+                   class="form-control mr-3"
+                   placeholder="joke id"
+                   required>
+          </div>
+          <button type="submit"
+                  class="btn btn-secondary mr-3"
+                  >get joke by number</button>
+        </form>
+      
+        <div id="joke-display">
+          <div id="joke-controls">
+            <button id="joke-control-prev"
+                    class="btn btn-secondary"
+                    >
+              &laquo; Prev
+            </button>
+            <button id="joke-control-random"
+                    class="btn btn-secondary"
+                    >
+              Random
+            </button>
+            <button id="joke-control-next"
+                    class="btn btn-secondary"
+                    >
+              Next &raquo;
+            </button>
+          </div><!-- /joke-controls -->
+      
+          <div id="joke-text" class="hidden">
+          </div>
+          <div id="joke-loading">
+            <i class="fa fa-spin fa-spinner"></i>
+            &nbsp; Loading
+          </div>
+        </div><!-- /joke-display -->
+      </div><!-- /joke-container -->
+    <script src="dad_j.js"></script>
+</body>
+</html>
