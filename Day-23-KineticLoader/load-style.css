@@ -1,0 +1,116 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  background-color: #2222;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+  overflow: hidden;
+  margin: 0;
+}
+
+.kinetic {
+  position: relative;
+  height: 80px;
+  width: 80px;
+}
+
+.kinetic::after,
+.kinetic::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 0;
+  width: 0;
+  border: 50px solid transparent;
+  border-bottom-color: #fff;
+  -webkit-animation: rotationA 2s linear infinite 0.5s;
+          animation: rotationA 2s linear infinite 0.5s;
+}
+
+.kinetic::before {
+  -webkit-transform: rotate(90deg);
+          transform: rotate(90deg);
+  -webkit-animation: rotationB 2s linear infinite;
+          animation: rotationB 2s linear infinite;
+}
+
+@-webkit-keyframes rotationA {
+  0%,
+  25% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50%,
+  75% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotationA {
+  0%,
+  25% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  50%,
+  75% {
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes rotationB {
+  0%,
+  25% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50%,
+  75% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  100% {
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
+  }
+}
+
+@keyframes rotationB {
+  0%,
+  25% {
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+  50%,
+  75% {
+    -webkit-transform: rotate(270deg);
+            transform: rotate(270deg);
+  }
+  100% {
+    -webkit-transform: rotate(450deg);
+            transform: rotate(450deg);
+  }
+}
+/*# sourceMappingURL=load-style.css.map */
